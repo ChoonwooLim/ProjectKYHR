@@ -1,0 +1,22 @@
+{
+  "name": "프로젝트경영한류",
+  "version": "1.0.0",
+  "description": "프로젝트 경영 한류 웹사이트",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+
+
+
