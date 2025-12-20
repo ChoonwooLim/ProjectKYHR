@@ -90,6 +90,32 @@ main {
     background: #000;
 }
 
+.video-overlay {
+    position: absolute;
+    inset: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+}
+
+.video-overlay:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.video-overlay[hidden] {
+    display: none;
+}
+
 footer {
     background: #f8f9fa;
     padding: 20px 30px;
@@ -131,5 +157,3 @@ footer {
         font-size: 0.9em;
     }
 }
-
-

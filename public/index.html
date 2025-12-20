@@ -11,15 +11,18 @@
     <div class="container">
         <header>
             <h1>프로젝트 경영 한류</h1>
-            <p class="subtitle">한국인의 창조, 안으로 셰계화</p>
+            <p class="subtitle">"한국인의 창조, 안으로 셰계화"</p>
         </header>
         
         <main>
             <div class="video-container">
-                <video controls autoplay muted playsinline preload="metadata">
+                <video id="mainVideo" controls playsinline preload="metadata">
                     <source src="/contents/프로젝트경영한류_v2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <button id="unmutePlay" class="video-overlay" type="button">
+                    재생
+                </button>
             </div>
         </main>
         
@@ -27,5 +30,21 @@
             <p>&copy; 2025 프로젝트 경영 한류. All rights reserved.</p>
         </footer>
     </div>
+
+    <script>
+        (() => {
+            const video = document.getElementById('mainVideo');
+            const button = document.getElementById('unmutePlay');
+
+            if (!video || !button) return;
+
+            button.addEventListener('click', () => {
+                video.muted = false;
+                video.volume = 1;
+                video.play().catch(() => {});
+                button.hidden = true;
+            });
+        })();
+    </script>
 </body>
 </html>
