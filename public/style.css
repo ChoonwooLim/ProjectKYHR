@@ -80,6 +80,16 @@ main {
     border: none;
 }
 
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #000;
+}
+
 footer {
     background: #f8f9fa;
     padding: 20px 30px;
@@ -121,6 +131,5 @@ footer {
         font-size: 0.9em;
     }
 }
-
 
 

@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 // 정적 파일 제공
 app.use(express.static('public'));
+app.use('/contents', express.static(path.join(__dirname, 'contents')));
 
 // 메인 페이지
 app.get('/', (req, res) => {
@@ -15,6 +16,5 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(`서버가 포트 ${PORT}에서 실행 중입니다.`);
 });
-
 
 
